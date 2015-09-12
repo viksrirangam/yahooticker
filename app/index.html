@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="ticker">
+<head>
+    <link rel="stylesheet" href="app.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+<table ng-controller="StockController as ticker">
+    <tr>
+        <th>#</th>
+        <th>Company</th>
+        <th>Symbol</th>
+        <th>Value</th>
+        <th>Trend</th>
+    </tr>
+    <tr ng-repeat="quote in quotes">
+        <th>{{$index}}</th>
+        <td>{{quote.Name}}</td>
+        <td>{{quote.Symbol}}</td>
+        <td>{{quote.Value}}</td>
+        <td>
+            <span class="quote-{{quote.Trend}}"></span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

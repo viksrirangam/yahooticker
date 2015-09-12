@@ -1,0 +1,11 @@
+/* app css stylesheet */
+
+.quote-up:after {
+    content: '\25B2';
+    color: green;
+}
+
+.quote-down:after {
+    content: '\25BC';
+    color: red;
+}
