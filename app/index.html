@@ -2,13 +2,14 @@
 <html ng-app="ticker">
 <head>
     <title>Stock Ticker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">    
     <link rel="stylesheet" href="app.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
-<table ng-controller="StockController as ticker">
+<table ng-controller="StockController as ticker" class="table table-condensed">
     <tr>
         <th>#</th>
         <th>Company</th>
@@ -17,7 +18,7 @@
         <th>Trend</th>
     </tr>
     <tr ng-repeat="quote in quotes">
-        <th>{{$index}}</th>
+        <th>{{$index+1}}</th>
         <td>{{quote.Name}}</td>
         <td>{{quote.Symbol}}</td>
         <td>{{quote.Value}}</td>
